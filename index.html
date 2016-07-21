@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Angular To-Do App</title>
+</head>
+<body ng-app="toDo">
+  <h1>The To-Do List!</h1>
+  <p>Stay accountable by keeping track of the tasks you need to complete. Enter your tasks in the input below and add it to your to-do list.</p>
+  <div ng-controller="toDoController">
+    <form name="toDoForm" ng-submit="addToDo()">
+      <input type="text" name="newToDo" ng-modal="newToDo" placeholder="New to-do Item" required>
+      <button ng-disabled="toDoForm.$invalid">Add Task</button>
+    </form>
+    <p>Once you've completed your task, click the on the check box next to the task to mark it complete. Once you have hit the checkbox, press the button below to remove any completed tasks from your list. Rinse, repeat, and stay productive!</p>
+    <button ng-click="clearCompleted()">Clear Completed Tasks</button>
+      <ul>
+        <li ng-repeat="todo in todos">
+          <input type="checkbox" ng-modal="todo.completed">
+          <span ng-class="{'completed':todo.completed}">{{todo.toDoName}}</span>
+        </li>
+      </ul>
+    </div>
+  <script src="js/angular.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
