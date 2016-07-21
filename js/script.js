@@ -1,4 +1,5 @@
 var toDo = angular.module("toDo", []);
+var completedTask = angular.module("completedTask", []);
 
 toDo.controller("toDoController",["$scope", function($scope){
   $scope.todos =[
@@ -20,7 +21,9 @@ toDo.controller("toDoController",["$scope", function($scope){
 // Remove completed tasks with the "completed" class
   $scope.clearCompleted = function(){
     $scope.todos = $scope.todos.filter(function(item){
-      return !item.completed
+      return !item.completed;
+      $scope.completedTasks.push(item);
     });
   };
+// Push completed tasks to another div
 }]);

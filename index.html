@@ -25,6 +25,12 @@
           <span ng-class="{'completed':todo.completed}">{{todo.toDoName}}</span>
         </li>
       </ul>
+      <ul>
+        <li ng-repeat="completedTask in completedTasks">
+          {{completedTask.toDoName}}
+        </li>
+      </ul>
+      <p>Look at that growing list of tasks you've completed! I'm impressed. Don't stop now!</p>
     </div>
   <script src="js/angular.min.js"></script>
   <script src="js/script.js"></script>
