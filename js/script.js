@@ -1,7 +1,9 @@
 var toDo = angular.module("toDo", []);
 
 toDo.controller("toDoController",["$scope", function($scope){
-  $scope.completedTask = [];
+// Completed Tasks Array
+  $scope.completedTasks = [];
+// Array for objects of tasks we will be adding to
   $scope.todos =[
     {
       "toDoName":"Build my Angular to-do application",
@@ -23,8 +25,9 @@ toDo.controller("toDoController",["$scope", function($scope){
     for (i=0; i<$scope.todos.length;i++){
       if ($scope.todos[i].completed){
       // First push completed tasks to another array
-      $scope.completedTask.push($scope.todos[i]);
-      console.log($scope.completedTask);
+      $scope.completedTasks.push($scope.todos[i]);
+      // Check if array is being filled by the object
+      console.log($scope.completedTasks);
     };
   }
     // Then remove them from the to-do list
