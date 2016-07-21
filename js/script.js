@@ -11,6 +11,18 @@ toDo.controller("toDoController",["$scope", function($scope){
     },
     {
       "toDoName":"Push completed items to another div",
+      "completed":true
+    },
+    {
+      "toDoName":"Update colors of the completed tasks",
+      "completed":false
+    },
+    {
+      "toDoName":"Include a search functionallity to filter through current tasks",
+      "completed":false
+    },
+    {
+      "toDoName":"Include a search functionallity to filter through completed tasks",
       "completed":false
     }
   ];
@@ -33,7 +45,6 @@ toDo.controller("toDoController",["$scope", function($scope){
     // Then remove them from the to-do list
     $scope.todos = $scope.todos.filter(function(item){
       return !item.completed;
-
     });
   };
 }]);

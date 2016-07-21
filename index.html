@@ -8,30 +8,38 @@
   <title>Angular To-Do App</title>
 </head>
 <body ng-app="toDo">
-  <h1>The To-Do List!</h1>
-  <p>Stay accountable by keeping track of the tasks you need to complete. Enter your tasks in the input below and add it to your to-do list.</p>
-  <div ng-controller="toDoController">
-    <form name="toDoForm" ng-submit="addToDo()">
-      <input type="text" name="newToDo" ng-model="newToDo" placeholder="New To-Do Item" required>
-      <button ng-disabled="toDoForm.$invalid">Add Task</button>
-    </form>
-    <p>
-      Once you've completed your task, click the on the check box next to the task to mark it complete. Once you have hit the checkbox, press the button below to remove any completed tasks from your list. Rinse, repeat, and stay productive!
-    </p>
-    <button ng-click="clearCompleted()">Clear Completed Tasks</button>
-      <ul>
-        <li ng-repeat="todo in todos">
-          <input type="checkbox" ng-model="todo.completed">
-          <span ng-class="{'completed':todo.completed}">{{todo.toDoName}}</span>
-        </li>
-      </ul>
-      <h1>Your Completed To-Do List!</h1>
-      <ul>
-        <li ng-repeat="task in completedTasks">
-          {{task.toDoName}}
-        </li>
-      </ul>
-      <p>Look at that growing list of tasks you've completed! I'm impressed. Don't stop now!</p>
+  <header>
+    <img class="header" src="images/discipline.jpg" alt="Discipline = Freedom" />
+  </header>
+  <div>
+    <img class="notepad" src="images/notepad.jpg" alt="notepad and pen background" />
+    <div class="main-body">
+      <h1 class="top">The To-Do List!</h1>
+      <p>Stay accountable by keeping track of the tasks you need to complete. Enter your tasks in the input below and add it to your to-do list.</p>
+      <div ng-controller="toDoController">
+        <form name="toDoForm" ng-submit="addToDo()">
+          <input type="text" name="newToDo" ng-model="newToDo" placeholder="New To-Do Item" required>
+          <button ng-disabled="toDoForm.$invalid">Add Task</button>
+        </form>
+        <p>
+          Once you've completed your task, click the on the check box next to the task to mark it complete. Once you have hit the checkbox, press the button below to remove any completed tasks from your list. Rinse, repeat, and stay productive!
+        </p>
+        <button ng-click="clearCompleted()">Clear Completed Tasks</button>
+          <ul>
+            <li class="stillToDo" ng-repeat="todo in todos">
+              <input type="checkbox" ng-model="todo.completed">
+              <span ng-class="{'completed':todo.completed}">{{todo.toDoName}}</span>
+            </li>
+          </ul>
+          <h1>Your Completed To-Do List!</h1>
+          <ul>
+            <li class="complete" ng-repeat="task in completedTasks">
+              {{task.toDoName}}
+            </li>
+          </ul>
+          <p>Look at that growing list of tasks you've completed! I'm impressed. Don't stop now!</p>
+        </div>
+      </div>
     </div>
   <script src="js/angular.min.js"></script>
   <script src="js/script.js"></script>

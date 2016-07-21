@@ -1,8 +1,35 @@
+.header {
+  width: 100%;
+  display: block;
+}
+
+.notepad {
+  position: absolute;
+  width: 100%;
+}
+
+.main-body {
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1.top {
+  padding: 100px 0px 0px 0px;
+}
+
 li {
   list-style: none;
 }
 
+.stillToDo{
+  color: #ff0000;
+}
+
 .completed {
   text-decoration: line-through;
-  color: #cccccc;
+  color: #00D200;
+  font-weight: bold;
 }
