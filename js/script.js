@@ -15,7 +15,7 @@ toDo.controller("toDoController",["$scope", function($scope){
     },
     {
       "toDoName":"Update colors of the completed tasks",
-      "completed":false
+      "completed":true
     },
     {
       "toDoName":"Include a search functionallity to filter through current tasks",

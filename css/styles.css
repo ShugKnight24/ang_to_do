@@ -1,15 +1,29 @@
+body {
+  background-color: black;
+}
+
+.appBody {
+  background-image: url(../images/notepad.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 1px solid #000000;
+  font-weight: bold;
+}
+
 .header {
   width: 100%;
   display: block;
-}
-
-.notepad {
-  position: absolute;
-  width: 100%;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  border: 1px solid #000000;
 }
 
 .main-body {
-  position: relative;
+  padding: 0 25px 0px 80px;
 }
 
 h1 {
@@ -17,11 +31,27 @@ h1 {
 }
 
 h1.top {
-  padding: 100px 0px 0px 0px;
+  padding: 100px 0 0 0;
+}
+
+input {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #000000;
+}
+
+button {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid #000000;
 }
 
 li {
   list-style: none;
+  padding: 0 25px 0px 0px;
+  margin-left: -35px;
 }
 
 .stillToDo{
@@ -30,6 +60,6 @@ li {
 
 .completed {
   text-decoration: line-through;
-  color: #00D200;
+  color: #026B02;
   font-weight: bold;
 }
